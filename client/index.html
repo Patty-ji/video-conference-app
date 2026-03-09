@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Meet</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<h1>Video Conferencing Platform</h1>
+
+<button onclick="createMeeting()">Create Meeting</button>
+
+<br><br>
+
+<input id="roomId" placeholder="Enter Room ID">
+<button onclick="joinMeeting()">Join Meeting</button>
+
+<script>
+
+function createMeeting(){
+window.location.href="/meeting.html";
+}
+
+function joinMeeting(){
+const room=document.getElementById("roomId").value;
+window.location.href=`/meeting.html?room=${room}`;
+}
+
+</script>
+
+</body>
+</html>
